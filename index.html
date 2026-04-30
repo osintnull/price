@@ -5,11 +5,14 @@
   <title>OSINT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Manrope', system-ui, sans-serif;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,121 +27,157 @@
 
 <main>
 
-<section class="intro animate">
-  <div class="wrap intro-center">
+<section class="intro">
+  <div class="wrap">
     <h1>OSINT и цифровая защита</h1>
     <p class="intro-text">
-      Работа с открытыми источниками, анализ цифрового следа  
-      и защита личности в рамках правового поля.
+      Анализ информации и работа с цифровым следом
     </p>
   </div>
 </section>
 
-<section class="principles animate delay-1">
-  <div class="wrap principles-grid">
-    <div>Open Sources Only</div>
-    <div>No Intrusion</div>
-    <div>Legal Framework</div>
-    <div>Data Correlation</div>
+<section class="principles">
+  <div class="wrap">
+    <div class="principles-grid">
+      <div>Open Sources</div>
+      <div>No Intrusion</div>
+      <div>Data Analysis</div>
+      <div>Privacy</div>
+    </div>
   </div>
 </section>
 
-<section class="pricing animate delay-2">
+<section class="pricing">
   <div class="wrap">
-    <h2>Услуги и стоимость</h2>
+
+    <h2>Услуги</h2>
 
     <div class="pricing-main">
 
       <div class="service-card">
-        <div class="card-head">
-          <h3>OSINT-отчет</h3>
-          <span class="tag">one-time</span>
+        <div class="card-top">
+          <h3>OSINT-отчёт</h3>
+          <span class="tag">base</span>
         </div>
 
         <p>
-          Структурированный отчёт об объекте начиная от базовой информации заканчивая документами (возможно о усыновлении).
+          Базовая информация: аккаунты, активность, связи.
         </p>
 
-        <a href="https://t.me/send?start=IVHxyHpzdbVy" target="_blank" class="price-link single">
-          3.5 USD
-        </a>
+        <div class="card-bottom">
+          <a href="#" class="price-link price-action">5 USD</a>
+        </div>
+      </div>
+
+      <div class="service-card accent">
+        <div class="card-top">
+          <h3>Расширенный OSINT</h3>
+          <span class="tag accent">primary</span>
+        </div>
+
+        <p>
+          Глубокий поиск: архивы, связи, документы (возможно об усыновлении).
+        </p>
+
+        <div class="card-bottom">
+          <a href="#" class="price-link price-action">12 USD</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="card-top">
+          <h3>Деанонимизация</h3>
+          <span class="tag">custom</span>
+        </div>
+
+        <p>
+          Поиск личности при попытке скрыться.
+        </p>
+
+        <div class="card-bottom">
+          <a href="#" class="price-link price-action">от 15 USD</a>
+        </div>
       </div>
 
     </div>
 
     <div class="pricing-secondary">
 
-      <div class="service-card compact">
-        <div class="card-head">
-          <h3>Деанонимизация</h3>
-          <span class="tag">custom</span>
+      <div class="service-card">
+        <div class="card-top">
+          <h3>Аудит цифрового следа</h3>
+          <span class="tag">security</span>
         </div>
 
         <p>
-          Всё то же, что и при обычном отчете, но в этом случае если объект соблюдает анонимность.
+          Проверка, что о вас можно найти и обьяснение как очистить след.
         </p>
-        <div class="price-muted">
-          Стоимость определяется после оценки сложности
+
+        <div class="card-bottom">
+          <a href="#" class="price-link price-action">7 USD</a>
         </div>
       </div>
 
-      <div class="service-card compact">
-        <div class="card-head">
-          <h3>SWAT</h3>
-          <span class="tag">fixed</span>
+      <div class="service-card">
+        <div class="card-top">
+          <h3>Разбор ситуации</h3>
+          <span class="tag">support</span>
         </div>
 
         <p>
-          Сообщение о действиях объекта в
-          соответствующие ограны 
-          (не обязательно правда).
+          Помощь при скаме, угрозах, конфликте и остальных случаях.
         </p>
-        <a href="https://t.me/send?start=IV8f3tzI1mpZ" target="_blank" class="price-link fixed">
-          10 USD
-        </a>
+
+        <div class="card-bottom">
+          <a href="#" class="price-link price-action">4 USD</a>
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
 
-<section class="threats animate delay-3">
+<section class="process">
   <div class="wrap">
-    <h2>Модели угроз</h2>
-    <div class="threats-grid">
-      <div>Doxxing attempts</div>
-      <div>Targeted harassment</div>
-      <div>Digital profiling</div>
-      <div>Data leaks</div>
-    </div>
-  </div>
-</section>
 
-<section class="work-format animate delay-4">
-  <div class="wrap">
-    <div class="format-card">
+    <div class="process-card">
       <h2>Формат работы</h2>
 
-      <div class="format-grid">
-        <ul>
-          <li>Только открытые источники (OSINT)</li>
-          <li>Без взлома и вмешательства</li>
-          <li>Работа строго в правовом поле</li>
-          <li>Корреляция и валидация данных</li>
-        </ul>
+      <div class="process-steps">
 
-        <ul>
-          <li>Мошеннические и незаконные запросы не принимаются</li>
-          <li>Возврат средств не предусмотрен при выполнении ТЗ</li>
-          <li>При оплате указывайте свой username</li>
-          <li>Либо предварительно пишите в личные сообщения</li>
-        </ul>
+        <div class="step">
+          <span>1</span>
+          <p>Вы отправляете исходные данные или описание задачи</p>
+        </div>
+
+        <div class="step">
+          <span>2</span>
+          <p>Оценивается объём информации и сложность</p>
+        </div>
+
+        <div class="step">
+          <span>3</span>
+          <p>Проводится анализ открытых источников</p>
+        </div>
+
+        <div class="step">
+          <span>4</span>
+          <p>Формируется итоговый результат</p>
+        </div>
+
       </div>
+
+      <div class="process-note">
+        Работа ведётся исключительно с открытыми данными.
+      </div>
+
     </div>
+
   </div>
 </section>
 
-<section class="contact animate delay-5">
+<section class="contact">
   <div class="wrap">
     <a href="https://t.me/osintnull" target="_blank" class="contact-btn">
       Перейти в Telegram
@@ -153,9 +192,8 @@
   <div class="wrap">© 2026</div>
 </footer>
 
+<script src="script.js"></script>
+
 </main>
 </body>
 </html>
-
-
-
