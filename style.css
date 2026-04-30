@@ -389,16 +389,20 @@ footer {
   opacity: 0.5;
 }
 
-@media (max-width: 600px) {
-  .header-inner {
-    padding: 14px 18px;
+@media (max-width: 900px) {
+  .pricing-main {
+    grid-template-columns: 1fr;
   }
 
-  .logo {
-    font-size: 18px;
+  .pricing-secondary {
+    grid-template-columns: 1fr;
   }
 
-  .header-link {
-    font-size: 13px;
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
   }
 }
