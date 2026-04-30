@@ -378,12 +378,21 @@ footer {
   opacity: 0.5;
 }
 
-@media (max-width: 900px) {
-  .pricing-main,
-  .pricing-secondary,
-  .process-steps,
-  .principles-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 600px) {
+  .header {
+    padding: 14px 16px;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .header-link {
+    font-size: 13px;
   }
 
   .intro h1 {
