@@ -167,6 +167,23 @@ main {
   perspective: 1000px;
 }
 
+.service-card,
+.pricing,
+.process-card,
+.intro,
+.contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity .7s cubic-bezier(.2,.7,.2,1),
+    transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .service-card {
   position: relative;
   z-index: 1;
@@ -179,16 +196,12 @@ main {
   overflow: hidden;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  will-change: transform;
-  transform:
-    translateY(0)
-    rotateX(var(--rx, 0deg))
-    rotateY(var(--ry, 0deg));
+  will-change: transform, opacity;
   transition:
+    opacity .7s cubic-bezier(.2,.7,.2,1),
     transform .25s ease,
     border .25s ease,
-    box-shadow .25s ease,
-    opacity .7s cubic-bezier(.2,.7,.2,1);
+    box-shadow .25s ease;
 }
 
 .service-card:hover {
@@ -412,22 +425,6 @@ footer {
   opacity: 0.5;
 }
 
-.hidden-start {
-  opacity: 0;
-  transform:
-    translateY(30px)
-    rotateX(var(--rx, 0deg))
-    rotateY(var(--ry, 0deg));
-}
-
-.visible {
-  opacity: 1;
-  transform:
-    translateY(0)
-    rotateX(var(--rx, 0deg))
-    rotateY(var(--ry, 0deg));
-}
-
 @media (max-width: 900px) {
   .pricing-main {
     grid-template-columns: 1fr;
@@ -444,4 +441,4 @@ footer {
   .process-steps {
     grid-template-columns: 1fr;
   }
-                              }
+  }
