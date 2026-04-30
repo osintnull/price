@@ -379,12 +379,12 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .header {
-    padding: 14px 16px;
+  header {
+    padding: 0 16px;
   }
 
-  .wrap {
-    padding: 0 16px;
+  .header {
+    padding: 14px 0;
   }
 
   .logo {
