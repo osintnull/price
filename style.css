@@ -44,6 +44,7 @@ a {
     radial-gradient(2px 2px at 40% 80%, rgba(124,77,255,0.25), transparent 60%),
     radial-gradient(2px 2px at 85% 25%, rgba(124,77,255,0.3), transparent 60%);
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .bg-effects::after {
@@ -53,6 +54,7 @@ a {
   background:
     radial-gradient(700px 400px at 50% 0%, rgba(124,77,255,0.08), transparent 70%),
     radial-gradient(600px 400px at 50% 100%, rgba(124,77,255,0.06), transparent 70%);
+  pointer-events: none;
 }
 
 header {
@@ -69,7 +71,6 @@ header {
   max-width: 1100px;
   margin: 0 auto;
   padding: 18px 24px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -203,12 +204,12 @@ main {
   opacity: 0;
   transition: opacity .8s ease;
   pointer-events: none;
+  z-index: 0;
 }
 
-.bg-effects,
-.bg-effects::before,
-.bg-effects::after {
-  pointer-events: none;
+.service-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .service-card:hover::before {
@@ -277,7 +278,7 @@ main {
 
 .price-link {
   position: relative;
-  z-index: 2;
+  z-index: 5;
   display: inline-flex;
   align-items: center;
   justify-content: center;
