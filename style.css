@@ -153,6 +153,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 28px;
+  perspective: 1000px;
 }
 
 .pricing-secondary {
@@ -163,6 +164,7 @@ main {
   max-width: 760px;
   margin-inline: auto;
   align-items: stretch;
+  perspective: 1000px;
 }
 
 .service-card {
@@ -174,12 +176,22 @@ main {
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 18px;
   padding: 26px;
-  transition: transform .25s ease, border .25s ease, box-shadow .25s ease;
   overflow: hidden;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform:
+    translateY(0)
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+  transition:
+    transform .25s ease,
+    border .25s ease,
+    box-shadow .25s ease,
+    opacity .7s cubic-bezier(.2,.7,.2,1);
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
   border-color: rgba(255,255,255,0.1);
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
@@ -400,6 +412,22 @@ footer {
   opacity: 0.5;
 }
 
+.hidden-start {
+  opacity: 0;
+  transform:
+    translateY(30px)
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+}
+
+.visible {
+  opacity: 1;
+  transform:
+    translateY(0)
+    rotateX(var(--rx, 0deg))
+    rotateY(var(--ry, 0deg));
+}
+
 @media (max-width: 900px) {
   .pricing-main {
     grid-template-columns: 1fr;
@@ -416,4 +444,4 @@ footer {
   .process-steps {
     grid-template-columns: 1fr;
   }
-}
+                              }
