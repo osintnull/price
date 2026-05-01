@@ -1,5 +1,5 @@
 const elements = document.querySelectorAll(
-  '.service-card, .pricing, .process-card, .intro, .contact'
+  '.service-card, .process-card, .intro, .contact'
 );
 
 const observer = new IntersectionObserver((entries) => {
